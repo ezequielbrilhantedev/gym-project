@@ -1,0 +1,19 @@
+body {
+    background: #2c2c2e;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    color: var(--green);
+    height: 100vh;
+}
+
+.imageWomanLogin {
+    width: 100%;
+}
+
+.sectionForm {
+    background: red;
+    height: 15rem;
+}
