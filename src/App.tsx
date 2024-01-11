@@ -1,29 +1,16 @@
-import styles from './App.module.css';
-import ImageWomanLogin from './assets/images/woman-login.svg';
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from './styles/global'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
+import { defaultTheme } from './styles/theme/default'
 
-function App() {
+export function App() {
   return (
-    <>
-      <div className={styles.wrapper}>
-        <main>
-          <div>
-            <img
-              className={styles.imageWomanLogin}
-              src={ImageWomanLogin}
-              alt=""
-            />
-          </div>
-
-          <section className={styles.sectionForm}>
-            <form>
-              <input type="email" name="" id="" />
-              <input type="password" name="" id="" />
-            </form>
-          </section>
-        </main>
-      </div>
-    </>
-  );
+    <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <GlobalStyle />
+    </ThemeProvider>
+  )
 }
-
-export default App;
